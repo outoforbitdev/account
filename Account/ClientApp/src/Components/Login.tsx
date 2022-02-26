@@ -1,12 +1,14 @@
 ﻿import React from 'react';
+import { TextField } from '../core/Components';
+import { PasswordField } from '../core/Components/PasswordField';
 
 export function Login() {
     return (
         <div>
             <label>Username</label>
-            <input type="text" />
+            <TextField />
             <label>Password</label>
-            <input type="password" />
+            <PasswordField />
             <button>Login</button>
         </div>
     );
