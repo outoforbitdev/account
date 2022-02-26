@@ -1,15 +1,17 @@
 ﻿import React from 'react';
-import { TextField } from '../core/Components';
+import { TextField } from '../core/Components/TextField';
+import { Modal } from '../core/Components/Modal';
 import { PasswordField } from '../core/Components/PasswordField';
 
 export function Login() {
     return (
-        <div>
+        <Modal>
             <label>Username</label>
-            <TextField />
+            <div><TextField clearable /></div>
+            <div><span /></div>
             <label>Password</label>
-            <PasswordField />
+            <div><PasswordField showable /></div>
             <button>Login</button>
-        </div>
+        </Modal>
     );
 }

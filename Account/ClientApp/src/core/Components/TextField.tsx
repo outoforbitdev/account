@@ -4,7 +4,7 @@ import {
 } from 'react';
 import '../Styles/Input.css';
 import { Button } from './Button';
-import { defaultValidator, IInputProps, onBlur, onKeyDown, onValueChange } from './InputField';
+import { defaultValidator, IInputProps, InputSpan, onBlur, onKeyDown, onValueChange } from './InputField';
 
 interface ITextFieldProps extends IInputProps<string> {
     clearable?: boolean;
@@ -22,7 +22,7 @@ export function TextField(props: ITextFieldProps): JSX.Element {
     const [value, setValue] = useState(defaultValue);
 
     return (
-        <div className={"OODCoreComponentInputField"}>
+        <InputSpan>
             <input type={"text"}
                 inputMode={"text"}
                 value={props.defaultValue}
@@ -34,7 +34,7 @@ export function TextField(props: ITextFieldProps): JSX.Element {
             {
                 props.clearable ? <Button text={"Clear"} onClick={__clearField} /> : null
             }
-        </div>
+        </InputSpan>
     );
 }
 
