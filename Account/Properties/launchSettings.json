@@ -22,6 +22,14 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+    "Account-Production": {
+        "commandName": "Project",
+        "launchBrowser": true,
+        "applicationUrl": "https://account.outoforbitdev.com:443;http://account.outoforbitdev.com:80",
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT":  "Production"
+        }
+      }
     }
-  }
 }
