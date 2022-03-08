@@ -1,0 +1,17 @@
+﻿body {
+}
+
+/*input.OODCoreComponentInput {
+    width: 135px;
+}*/
+
+span.OODCoreComponentInputField {
+    border-style: solid;
+    border-width: 1px;
+    padding: 2px;
+}
+
+.OODCoreComponentInputField input {
+    border: none;
+    -webkit-appearance: none
+}

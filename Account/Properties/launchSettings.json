@@ -1,0 +1,35 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:14555",
+      "sslPort": 44388
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Account": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:13565;http://localhost:49940",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Account-Production": {
+        "commandName": "Project",
+        "launchBrowser": true,
+        "applicationUrl": "https://account.outoforbitdev.com:443;http://account.outoforbitdev.com:80",
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT":  "Production"
+        }
+      }
+    }
+}
