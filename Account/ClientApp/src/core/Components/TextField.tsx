@@ -2,6 +2,7 @@ import * as React from 'react';
 import {
     useState
 } from 'react';
+import { Compose } from '../Library/Compose';
 import '../Styles/Input.css';
 import { Button } from './Button';
 import { defaultValidator, IInputProps, InputSpan, onBlur, onKeyDown, onValueChange } from './InputField';
@@ -25,21 +26,26 @@ export function TextField(props: ITextFieldProps): JSX.Element {
         <InputSpan>
             <input type={"text"}
                 inputMode={"text"}
-                value={props.defaultValue}
+                value={value}
                 className={"OODCoreComponentTextField"}
                 onBlur={onBlur(onQuickValidate, onFullValidate)}
                 onChange={onValueChange(onQuickValidate, onChange, setValue)}
                 onKeyDown={onKeyDown(setValue, defaultValue)}
             />
             {
-                props.clearable ? <Button text={"Clear"} onClick={__clearField} /> : null
+                props.clearable ?
+                    <Button text={"Clear"}
+                        onClick={Compose(__clearField, setValue)}
+                        seamless
+                        width={"40px"}
+                    /> : null
             }
         </InputSpan>
     );
 }
 
-function __clearField(): void {
-
+function __clearField(setValue: (val: string) => void): void {
+    setValue("");
 }
 
 //function defaultValidator(_val: string) {

@@ -13,5 +13,7 @@ span.OODCoreComponentInputField {
 
 .OODCoreComponentInputField input {
     border: none;
-    -webkit-appearance: none
+    -webkit-appearance: none;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }

@@ -2,6 +2,7 @@
 import { TextField } from '../core/Components/TextField';
 import { Modal } from '../core/Components/Modal';
 import { PasswordField } from '../core/Components/PasswordField';
+import { Button } from '../core/Components/Button';
 
 export function Login() {
     return (
@@ -11,7 +12,9 @@ export function Login() {
             <div><span /></div>
             <label>Password</label>
             <div><PasswordField showable /></div>
-            <button>Login</button>
+            <Button text={"Login"}
+                width={"234px"}
+            />
         </Modal>
     );
 }

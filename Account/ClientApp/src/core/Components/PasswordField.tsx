@@ -33,7 +33,12 @@ export function PasswordField(props: IPasswordFieldProps): JSX.Element {
                 size={props.size}
             />
             {
-                props.showable ? <Button text={visible ? "Hide" : "Show"} onClick={toggleVisible(setVisible, visible)} /> : null
+                props.showable ?
+                    <Button text={visible ? "Hide" : "Show"}
+                        seamless
+                        onClick={toggleVisible(setVisible, visible)}
+                        width={"40px"}
+                    /> : null
             }
         </InputSpan>
     );
