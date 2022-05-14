@@ -23,8 +23,8 @@ namespace Account
         {
 
             services.AddControllersWithViews();
-            services.AddDbContext<DBContext>(options =>
-                options.UseSqlite(Configuration.GetConnectionString("AccountDatabase")));
+            //services.AddDbContext<DBContext>(options =>
+            //    options.UseSqlite(Configuration.GetConnectionString("AccountDatabase")));
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
