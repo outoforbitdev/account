@@ -1,12 +1,7 @@
   # syntax=docker/dockerfile:1
-  FROM node:alpine AS base
+  FROM node:10 AS base
   WORKDIR /App
   RUN npm --version
-  RUN apk --no-cache --virtual build-dependencies add \
-    git \
-    python \
-    make \
-    g++
   COPY . ./
   WORKDIR /App/Account/ClientApp
   RUN npm install
