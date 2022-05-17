@@ -1,7 +1,8 @@
   # syntax=docker/dockerfile:1
   FROM node:alpine AS base
   WORKDIR /App
-  RUN npm --versionRUN apk --no-cache --virtual build-dependencies add \
+  RUN npm --version
+  RUN apk --no-cache --virtual build-dependencies add \
     git \
     python \
     make \
