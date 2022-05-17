@@ -1,12 +1,8 @@
   # syntax=docker/dockerfile:1
-  FROM node:17 AS base
-  #WORKDIR /App
-  RUN npm --version
-  #COPY . ./
-  #WORKDIR /App/Account/ClientApp
-  #RUN npm install
-  #RUN npm run build
   FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+  RUN curl --silent --location https://deb.nodesource.com/setup_10.x | bash -
+  RUN apt-get install --yes nodejs
+  RUN npm --version
   WORKDIR /App
   COPY . ./
   RUN dotnet restore
