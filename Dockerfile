@@ -3,8 +3,10 @@
   WORKDIR /App
   RUN npm --version
   COPY . ./
+  WORKDIR /App/Account/ClientApp
   RUN npm install /
   FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+  WORKDIR /App
   RUN dotnet restore
   RUN dotnet publish -c Release -o Account/bin/Release/net5.0/ AS production
   FROM mcr.microsoft.com/dotnet/aspnet:5.0
