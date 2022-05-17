@@ -1,6 +1,8 @@
   # syntax=docker/dockerfile:1
   FROM mcr.microsoft.com/dotnet/sdk:5.0
   WORKDIR /App
+  RUN apt update
+  RUN apt install nodejs npm
   COPY . ./
   RUN dotnet restore
   RUN npm install /
