@@ -1,5 +1,5 @@
   # syntax=docker/dockerfile:1
-  FROM mcr.microsoft.com/dotnet/sdk:5.0 AS base
+  FROM node:alpine AS base
   WORKDIR /App
   RUN npm --version
   COPY . ./
