@@ -3,6 +3,7 @@
   WORKDIR /App
   COPY . ./
   RUN dotnet restore
+  RUN npm install
   RUN dotnet publish -c Release -o Account/bin/Release/net5.0/
   FROM mcr.microsoft.com/dotnet/aspnet:5.0
   COPY Account/bin/Release/net5.0/ App/
