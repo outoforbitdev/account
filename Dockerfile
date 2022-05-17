@@ -1,5 +1,5 @@
   # syntax=docker/dockerfile:1
-  FROM node:10 AS base
+  FROM node:18 AS base
   WORKDIR /App
   RUN npm --version
   COPY . ./
