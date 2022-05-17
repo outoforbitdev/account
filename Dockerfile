@@ -1,7 +1,8 @@
   # syntax=docker/dockerfile:1
   FROM mcr.microsoft.com/dotnet/sdk:5.0
-  WORKDIR ./
-  RUN ls
+  WORKDIR /App
+  COPY . ./
+  RUN dotnet restore
   RUN dotnet publish -c Release -o Account/bin/Release/net5.0/
   FROM mcr.microsoft.com/dotnet/aspnet:5.0
   COPY Account/bin/Release/net5.0/ App/
