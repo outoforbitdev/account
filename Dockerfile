@@ -10,4 +10,4 @@
   FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS production
   COPY Account/bin/Release/net5.0/ App/
   WORKDIR /App
-ENTRYPOINT [ "dotnet", "run" "--launch-profile" "Account-Production" "Account.dll" ]
+ENTRYPOINT [ "dotnet", "Account.dll" "--launch-profile Account-Production" ]
