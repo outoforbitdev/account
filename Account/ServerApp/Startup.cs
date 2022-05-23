@@ -30,7 +30,7 @@ namespace Account
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
-                configuration.RootPath = "/var/aspnetcore/publish/ClientApp/build";
+                configuration.RootPath = "ClientApp/build";
             });
         }
 
@@ -70,7 +70,7 @@ namespace Account
 
             app.UseSpa(spa =>
             {
-                spa.Options.SourcePath = "/var/aspnetcore/publish/ClientApp";
+                spa.Options.SourcePath = "ClientApp";
 
                 if (env.IsDevelopment())
                 {
