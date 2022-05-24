@@ -10,12 +10,7 @@
   RUN dotnet restore
   COPY . ./
   RUN dotnet publish -c Release -o Account/bin/Release/net5.0/ --no-restore
-  RUN ls Account/bin/Release/net5.0/ClientApp/build/
   FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS production
   COPY --from=build App/Account/bin/Release/net5.0/ App/
-  RUN ls
-  RUN ls App/
-  RUN ls App/ClientApp/
-  RUN ls App/ClientApp/build
   WORKDIR /App
 ENTRYPOINT [ "dotnet", "Account.dll", "--launch-profile Account-Production" ]
