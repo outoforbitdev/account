@@ -12,7 +12,7 @@
   RUN dotnet publish -c Release -o Account/bin/Release/net5.0/ --no-restore
   RUN ls Account/bin/Release/net5.0/ClientApp/build/
   FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS production
-  COPY Account/bin/Release/net5.0/ App/
+  COPY --from=build Account/bin/Release/net5.0/ App/
   RUN ls
   RUN ls App/
   RUN ls App/ClientApp/
