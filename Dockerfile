@@ -4,9 +4,9 @@
   #RUN apt-get install --yes nodejs
   #RUN npm --version
   WORKDIR /App
+  COPY Account.sln ./
   COPY Account/Account.csproj Account/
   COPY Account.Tests/Account.Tests.csproj Account.Tests/
-  WORKDIR /App
   RUN ls
   RUN dotnet restore
   COPY . ./
