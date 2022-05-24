@@ -22,7 +22,7 @@
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Content Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
-    <None Remove="ClientApp\src\App.test.js" />
+    <!--<None Remove="ClientApp\src\App.test.js" />
     <None Remove="ClientApp\src\components\Counter.js" />
     <None Remove="ClientApp\src\Components\EncyclopediaPage %28copy%29.tsx" />
     <None Remove="ClientApp\src\Components\Login.tsx" />
@@ -30,7 +30,7 @@
     <None Remove="ClientApp\src\Components\SearchBar %28copy%29.tsx" />
     <None Remove="ClientApp\src\Components\Encyclopedia %28copy%29.tsx" />
     <None Remove="ClientApp\src\Components\Activity %28copy%29.tsx" />
-    <None Remove="ClientApp\src\Components\ListList %28copy%29.tsx" />
+    <None Remove="ClientApp\src\Components\ListList %28copy%29.tsx" />-->
   </ItemGroup>
 
   <ItemGroup>
@@ -56,8 +56,8 @@
 
   <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
-    <!--<Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
-    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />-->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />
 
     <!-- Include the newly-built files in the publish output -->
     <ItemGroup>
@@ -65,7 +65,7 @@
       <ResolvedFileToPublish Include="@(DistFiles-&gt;'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
         <RelativePath>%(DistFiles.Identity)</RelativePath>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <!--<ExcludeFromSingleFile>true</ExcludeFromSingleFile>-->
       </ResolvedFileToPublish>
     </ItemGroup>
   </Target>

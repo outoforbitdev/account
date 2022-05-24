@@ -13,13 +13,13 @@ namespace Account.Controllers
     [Route("[controller]")]
     public class V1Controller : Controller
     {
-        private DBContext Context { get; set; }
+        //private DBContext Context { get; set; }
 
         private const string Environment = "Foundation";
 
-        public V1Controller(DBContext context)
+        public V1Controller(/*DBContext context*/)
         {
-            Context = context;
+            //Context = context;
         }
 
         [HttpGet("test")]
