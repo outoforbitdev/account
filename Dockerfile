@@ -4,8 +4,10 @@
   RUN apt-get install --yes nodejs
   RUN npm --version
   WORKDIR /App
-  COPY . ./
+  COPY Account/Account.csproj Account/
+  COPY Account.Tests/Account.Tests.csproj Account.Tests/
   RUN dotnet restore
+  COPY . ./
   RUN dotnet publish -c Release -o Account/bin/Release/net5.0/ --no-restore
   FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS production
   COPY Account/bin/Release/net5.0/ App/
