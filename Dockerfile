@@ -6,6 +6,7 @@
   WORKDIR /App
   COPY Account/Account.csproj Account/
   COPY Account.Tests/Account.Tests.csproj Account.Tests/
+  WORKDIR /App
   RUN ls
   RUN dotnet restore
   COPY . ./
