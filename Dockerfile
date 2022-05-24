@@ -17,6 +17,5 @@
   RUN ls App/
   RUN ls App/ClientApp/
   RUN ls App/ClientApp/build
-  COPY Account/bin/Release/net5.0/ClientApp/build/ App/ClientApp/build/
   WORKDIR /App
 ENTRYPOINT [ "dotnet", "Account.dll", "--launch-profile Account-Production" ]
