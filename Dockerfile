@@ -6,7 +6,8 @@
   WORKDIR /App
   COPY Account/Account.csproj Account/
   COPY Account.Tests/Account.Tests.csproj Account.Tests/
-  RUN dotnet restore
+  RUN dotnet restore Account/Account.csproj
+  RUN dotnet restore Account.Tests/Account.Tests.csproj
   COPY . ./
   RUN dotnet publish -c Release -o Account/bin/Release/net5.0/ --no-restore
   RUN ls Account/bin/Release/net5.0/
