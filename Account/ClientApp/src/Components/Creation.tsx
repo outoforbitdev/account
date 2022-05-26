@@ -3,22 +3,20 @@ import { TextField } from '../core/Components/TextField';
 import { Modal } from '../core/Components/Modal';
 import { PasswordField } from '../core/Components/PasswordField';
 import { Button } from '../core/Components/Button';
-import { Link } from '../core/Components/Link';
-import { StyleThemes } from '../core/Components/IComponentProps';
-import { IComponentProps } from '../core/Components/IComponentProps';
 
-export function Login(props: IComponentProps) {
+export function Creation() {
     return (
         <Modal>
-            <label>Username</label>
+            <label>Email</label>
             <div><TextField clearable /></div>
             <div><span /></div>
             <label>Password</label>
             <div><PasswordField showable /></div>
-            <Button text={"Login"}
+            <label>Confirm Password</label>
+            <div><PasswordField showable /></div>
+            <Button text={"Create Account"}
                 width={"234px"}
-            /><br/>
-            <Link>Create Account</Link>
+            />
         </Modal>
     );
 }

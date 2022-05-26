@@ -1,11 +1,37 @@
 ﻿body {
 }
 
-span.OODCoreComponentInputField.OODCoreStyleThemeLight {
+.OODCoreStyleThemeLight {
+    --primary-background-color: white;
+    --secondary-background-color: gray;
+    --tertiary-background-color: white;
+    --primary-text-color: black;
+    --secondary-text-color: black;
+    --tertiary-text-color: black;
+    --primary-border-color: black;
+    --secondary-border-color: black;
+    --tertiary-border-color: black;
+    --link-color: blue;
+}
+
+.OODCoreStyleThemeDark {
+    --primary-background-color: #102A48;
+    --secondary-background-color: #486581;
+    --tertiary-background-color: #9FB3C8;
+    --primary-text-color: white;
+    --secondary-text-color: white;
+    --tertiary-text-color: black;
+    --primary-border-color: #334E68;
+    --secondary-border-color: #829AB1;
+    --tertiary-border-color: #D9E2FC;
+    --link-color: #BCCCDC;
+}
+
+/*span.OODCoreComponentInputField.OODCoreStyleThemeLight {
     background-color: white;
     border-color: black;
 }
 
 .OODCoreStyleThemeDark {
 
-}
+}*/

@@ -1,4 +1,5 @@
-﻿body {
+﻿@import url("Themes.css");
+body {
 }
 
 div.OODCoreModalContainer {
@@ -6,7 +7,7 @@ div.OODCoreModalContainer {
     flex-direction: column;
     min-width: 200px;
     height: 100vh;
-    background-color: gray;
+    background-color: var(--secondary-background-color);
     margin: 0px;
 }
 
@@ -22,7 +23,9 @@ div.OODCoreModalMargin{
 div.OODCoreModalFrame{
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--primary-background-color);
+    border-color: var(--primary-border-color);
+    color: var(--primary-text-color);
 }
 
 div.OODCoreModalContent{

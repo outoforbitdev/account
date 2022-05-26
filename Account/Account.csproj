@@ -19,6 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\Components\Login %28copy%29.tsx" />
+  </ItemGroup>
+  <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Content Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
@@ -43,6 +46,7 @@
     <TypeScriptCompile Include="ClientApp\src\Components\ListList.tsx" />
     <TypeScriptCompile Include="ClientApp\src\Components\ListDisplay.tsx" />
     <TypeScriptCompile Include="ClientApp\src\Components\Login.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\Components\Creation.tsx" />
   </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->

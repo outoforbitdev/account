@@ -1,0 +1,10 @@
+﻿@import url("Themes.css");
+
+body {
+}
+
+.OODCoreComponentLink {
+    color: var(--link-color);
+    text-decoration: underline;
+    cursor: pointer;
+}

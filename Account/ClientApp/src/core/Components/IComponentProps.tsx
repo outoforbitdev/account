@@ -11,6 +11,7 @@ export interface IComponentProps {
     className?: string;
     children?: ReactNode;
     theme?: StyleThemes;
+    changeTheme?: (theme: StyleThemes) => void;
 }
 
 export function getClassName(
@@ -20,7 +21,9 @@ export function getClassName(
 
     return combineClassNames(
         standardClassName,
-        combineClassNames(additionalClassName, theme ? theme : StyleThemes.Light));
+        //combineClassNames(additionalClassName, theme ? theme : StyleThemes.Light)
+        additionalClassName
+    );
 }
 
 function combineClassNames(firstName?: string, secondName?: string): string {

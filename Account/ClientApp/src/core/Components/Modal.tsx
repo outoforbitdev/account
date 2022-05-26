@@ -1,5 +1,6 @@
 import '../Styles/Modal.css';
 import { Button } from './Button';
+import { getClassName } from './IComponentProps';
 import { IComponentProps } from './IComponentProps';
 import { XRow } from './XRow';
 
@@ -12,7 +13,7 @@ interface IModalProps extends IComponentProps {
 export function Modal(props: IModalProps) {
 
     return (
-        <div className={"OODCoreModalContainer"}>
+        <div className={getClassName(props.className, "OODCoreModalContainer")}>
             <div className={"OODCoreModalColumn OODCoreModalMargin"}></div>
             <div className={"OODCoreModalColumn"}>
                 <div className={"OODCoreModalMargin"}></div>

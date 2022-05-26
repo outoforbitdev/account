@@ -1,10 +1,25 @@
-﻿body {
+﻿@import url("Themes.css");
+body {
 }
 
 button.OODCoreComponentButton {
-    border: solid 1px;
+    border: solid 1px var(--secondary-border-color);
+    background-color: var(--secondary-background-color);
+    color: var(--secondary-text-color);
     -webkit-appearance: none;
 }
+
+    button.OODCoreComponentButton:hover {
+        border: solid 1px var(--primary-border-color);
+        background-color: var(--primary-background-color);
+        color: var(--primary-text-color);
+    }
+
+    button.OODCoreComponentButton:active {
+        border: solid 1px var(--tertiary-border-color);
+        background-color: var(--tertiary-background-color);
+        color: var(--tertiary-text-color);
+    }
 
 button.OODCoreComponentButtonSeamless {
     border: none;
