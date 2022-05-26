@@ -1,13 +1,17 @@
-﻿import React from 'react';
-import { TextField } from '../core/Components/TextField';
+﻿import * as React from 'react';
+import { Screens } from '../App';
+import { Button } from '../core/Components/Button';
+import { IComponentProps } from '../core/Components/IComponentProps';
+import { Link } from '../core/Components/Link';
 import { Modal } from '../core/Components/Modal';
 import { PasswordField } from '../core/Components/PasswordField';
-import { Button } from '../core/Components/Button';
-import { Link } from '../core/Components/Link';
-import { StyleThemes } from '../core/Components/IComponentProps';
-import { IComponentProps } from '../core/Components/IComponentProps';
+import { TextField } from '../core/Components/TextField';
 
-export function Login(props: IComponentProps) {
+export interface ILoginProps extends IComponentProps {
+    changeScreen: (screen: Screens) => void;
+}
+
+export function Login(props: ILoginProps) {
     return (
         <Modal>
             <label>Username</label>
@@ -16,9 +20,11 @@ export function Login(props: IComponentProps) {
             <label>Password</label>
             <div><PasswordField showable /></div>
             <Button text={"Login"}
-                width={"234px"}
-            /><br/>
-            <Link>Create Account</Link>
+                width={"234px"} 
+            /><br />
+            <Link onClick={() => props.changeScreen(Screens.Create)}>
+                Create Account
+            </Link>
         </Modal>
     );
 }
