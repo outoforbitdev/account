@@ -24,7 +24,7 @@ export default class App extends Component<IAppProps, IAppState> {
     constructor(props: IAppProps) {
         super(props);
         this.state = {
-            theme: StyleThemes.Dark,
+            theme: StyleThemes.Light,
             screen: Screens.Login,
         };
     }

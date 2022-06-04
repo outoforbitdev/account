@@ -10,7 +10,7 @@ span.OODCoreComponentInputField {
     border-style: solid;
     border-width: 1px;
     border-color: var(--secondary-border-color);
-    background-color: var(--secondary-background-color);
+    background-color: var(--input-background-color);
     color: var(--primary-text-color);
     padding: 2px;
 }
@@ -21,6 +21,6 @@ span.OODCoreComponentInputField {
     margin-top: 4px;
     margin-bottom: 4px;
     border-color: var(--primary-border-color);
-    background-color: var(--secondary-background-color);
+    background-color: var(--input-background-color);
     color: var(--primary-text-color);
 }

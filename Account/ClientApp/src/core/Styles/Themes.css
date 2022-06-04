@@ -12,6 +12,7 @@
     --secondary-border-color: black;
     --tertiary-border-color: black;
     --link-color: blue;
+    --input-background-color: var(--primary-background-color);
 }
 
 .OODCoreStyleThemeDark {
@@ -25,6 +26,7 @@
     --secondary-border-color: #829AB1;
     --tertiary-border-color: #D9E2FC;
     --link-color: #BCCCDC;
+    --input-background-color: var(--secondary-background-color);
 }
 
 /*span.OODCoreComponentInputField.OODCoreStyleThemeLight {
